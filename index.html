@@ -7,8 +7,8 @@ layout: default
 {% for snippet in site.pages | where: 'category', 'snippet' %}
   {% if snippet.title %}
     <div class='snippet-card'>
-        <img src='/{{ snippet.url }}background.png'>
-        <h2><a href='{{ snippet.url }}'>{{ snippet.title }}</a></h2>
+        <img src='./{{ snippet.url }}background.png'>
+        <h2><a href='./{{ snippet.url }}'>{{ snippet.title }}</a></h2>
         <h3>{{ snippet.subtitle }}</h3>
         <hr>
         <p class='description'>
