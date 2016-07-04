@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+    body {
+        /* Remove the default margin that the <body> element comes with */
+        margin: 0;
+    }
+    
+    #background {
+        /* Give our background div a width, a height, and a background color
+        so that we can see it */
+        width: 500px;
+        height: 500px;
+        background-color: lightblue;
+        /* And tell our browser to position this `fixed`, i.e. relative to the
+        window itself */
+        position: fixed;
+        /* Setting the left edge of `#background` at 10% of our window */
+        left: 10%;
+        /* And its top at 13% */
+        top: 13%;
+    }
+    
+    #marginDiv {
+        /* Give our div for demonstrating the use of margin a width, height,
+        and background color so that we can see it */
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        /* And then tell our browser to make sure that everything stays at
+        least 100px from its left edge and 20px from its top edge.  This
+        pushes it away from its parent container, the #background div.  You
+        can read more about the `margin` attribute at
+        https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+    
+    #absoluteDiv {
+        /* Give our div for demonstrating the use of absolute positioning a
+        width, height, and background color so that we can see it */
+        width: 100px;
+        height: 100px;
+        background-color: lightgreen;
+        /* And then tell our browser to make sure that everything is
+        positioned with regard to its nearest, explicitly positioned (i.e.
+        fixed or absolute or relative or whatever) parent.  You can read more
+        about the `position` attribute at https://developer.mozilla.org/en-
+        US/docs/Web/CSS/position */
+        position: absolute;
+        /* And within that, tell our browser to set its left and top edge at
+        50% of the width and height (respectively) of that parent. */
+        left: 50%;
+        top: 50%;
+    }
+    
+    #relativeDiv {
+        /* Give our div for demonstrating the use of relative positioning a
+        width, height, and background color so that we can see it */
+        width: 100px;
+        height: 100px;
+        background-color: lightyellow;
+        position: relative;
+        top: -10px;
+    }
+    
+    #floatBackground {
+        /* Give our div for demonstrating the use of float a width, height,
+        and background color so that we can see it */
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        position: absolute;
+        top: 100%;
+    }
+    /* Notice that we aren't naming the divs nested within #floatBackground.
+    This is called a child selector.  You can read more about them at
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors */
+    
+    #floatBackground div {
+        /* Give our floating divs a width, height, background color, and
+        border so that we can see them */
+        width: 10px;
+        height: 10px;
+        background-color: grey;
+        border: 1px solid black;
+        /* Then tell them to float to the right and make sure that everything
+        stays at least 20px away from all its sides.  You can read more about
+        the `float` attribute at https://developer.mozilla.org/en-
+        US/docs/Web/CSS/float */
+        float: right;
+        margin: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id='background'>
+        <div id='marginDiv'></div>
+        <div id='absoluteDiv'></div>
+        <div id='relativeDiv'></div>
+    </div>
+    <div id='floatBackground'>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
