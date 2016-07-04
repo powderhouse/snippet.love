@@ -3,13 +3,23 @@ layout: default
 ---
 
 <main style="padding: 1em;">
-  <h1>Hello World</h1>
-  <p>This is a website that has multiple posts in a blog type format.</p>
-  <p>Edit or add posts in the _posts/ directory</p>
-  <p>Add a new page by creating a directory with the name i.e to make the url http://localhost:3000/about/ just create a directory called about and put a new index.html file in there.</p>
+
+{% for snippet in site.pages | where: 'category', 'snippet' %}
+  {% if snippet.title %}
+    <div class='snippet-card'>
+        <img src='{{ snippet.url }}/background.png'>
+        <h2><a href='{{ snippet.url }}'>{{ snippet.title }}</a></h2>
+        <h3>{{ snippet.subtitle }}</h3>
+        <hr>
+        <p class='description'>
+            {{ snippet.description }}
+        </p>
+    </div>
+  {% endif %}
+{% endfor %}
 </main>
 <footer style="padding: 1em;">
-{% if site.posts %}
+<!-- {% if site.posts %}
   <h2>A list of all the posts</h2>
   <ul>
     {% for post in site.posts %}
@@ -21,5 +31,6 @@ layout: default
     {% endfor %}
   </ul>
 {% endif %}
-<small>Copyright 2015</small>
+ -->
+ <small></small>
 </footer>

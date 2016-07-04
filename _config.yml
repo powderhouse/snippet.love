@@ -1,27 +1,19 @@
-#=====================================
-#
-# NKD - A simple Jekyll boilerplate
-#
-# More on Jekyll: http://jekyllrb.com/
-#
-#=====================================
-
 # This will be the first part of the title tag for your site
 # <title> {{site.name}} </title>
 # ============================================================
-name: "NKD - Boilerplate for HTML5/SCSS projects."
+name: "snippet.love - HTML, CSS, and JavaScript hors d'oeuvres"
 
 # Populates the meta description for the site. Should be under 150 characters for best SEO results.
 # ============================================================
-description: "NKD - Boilerplate for responsive HTML5/SCSS jekyll projects."
+description: "snippet.love - HTML, CSS, and JavaScript hors d'oeuvres, i.e. code snippets"
 
-# Owner (organization or individual) of site content - You'll want to change this from mrmrs :)
+# Owner (organization or individual) of site content
 # ============================================================
-author: "mrmrs"
+author: "sprout &amp; co + dgmd"
 
 # Change this to your production URL
 # ============================================================
-url: "http://mrmrs.io/nkd"
+url: "http://snippet.love"
 
 # Publish future posts or not option.
 # ============================================================
@@ -47,6 +39,16 @@ permalink: pretty
 # /:month-:day-:year/:title.html/                 => 04-29-2009/slap-chop.html
 # /blog/:year/:month/:day/:title                  => /blog/2009/04/29/slap-chop/index.html
 
-# Uncomment if you have pygments installed. Used for code syntax highlighting.
-# If you're not doing syntax highlighting you can delete this.
-# highlighter: pygments
+
+# ============================================================
+# ============================================================
+
+highlighter: rouge
+
+kramdown:
+  input: GFM
+
+collections:
+  snippets:
+    output: true
+    permalink: /snippets/:slug
