@@ -1,0 +1,98 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif;
+    color: #111;
+    line-height: 1.5em;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(247, 228, 190, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(65, 62, 74);
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: rgba(65, 62, 74, 0.625);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgba(65, 62, 74, 0.375);
+}
+
+.snippet-summary .header {
+    margin-bottom: 3rem;
+}
+#demo a {
+    font-size: 0.875em;
+    color: lightblue;
+    text-decoration: none;
+}
+header {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 7rem;
+    width: 100%;
+    height: 1em;
+    margin-bottom: 0.25em;
+    line-height: 0.75em;
+    text-align: center;
+    color: rgb(179, 129, 132);
+}
+
+iframe.demo {
+    border: none;
+    box-shadow: inset 0px 0px 10px 0px #777777;
+}
+
+.screencast {
+    width: 100%;
+}
+
+.snippet-card {
+    position: relative;
+    height: 250px;
+    width: 250px;
+}
+
+.snippet-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.snippet-card h2 {
+    text-align: center;
+}
+
+
+/* Hovering/fade-in effects for snippet-card*/
+
+.snippet-card img {
+    opacity: 0.125;
+}
+
+.snippet-card,
+.snippet-card img {
+    transition: 0.25s;
+}
+
+.snippet-card:hover img {
+    opacity: 1;
+}
+
+.snippet-card:hover h2,
+.snippet-card:hover p {
+    opacity: 0.5;
+}
+
+section.code {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80em;
+    background-color: grey;
+}
