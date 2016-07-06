@@ -17,7 +17,6 @@ First: Create a new folder within `/snippets`; name it something short-but-summa
 + `background.png` — a _square_ PNG file.  This file will be used as the background to represent your snippet on the homepage.
 + `screencast.mp4` — an `mp4` file _less than 100MB_ in size
 + `code.html` — the entry point for the actual snippet (it may be the only file for the snippet).  If you have multiple files to include in your snippet, please be sure to look at the required YAML front-matter for `index.md`.
-+ `summary.md` — A short, one- or two-paragraph summary of what the snippet is about and why you might want to look at it.
 + `extensions.md` — A numbered list of suggested extensions, ordered by increasing complexity.  Include any references which are uniquely pertinent to an extension here.
 + `readings.md` — A selection of references, videos, or related readings covering the same topic as the snippet.
 + `index.md` — An empty markdown file containing only YAML front-matter.  The front-matter should define at least the following variables:
@@ -26,7 +25,7 @@ First: Create a new folder within `/snippets`; name it something short-but-summa
   * `layout: snippet-summary`
   * `category: snippet`
   * `screencast` should be `true` if there is a screencast to embed or `false` otherwise
-  * `demo` should be `true` if you'd like the `code.html` file embedded as an `iframe` in the snippet page or `false otherwise`
+  * `demoDescription` should contain a short, one sentence description of how to use the demo/what it does.
   * `files` should only be included if you have multiple files to include.  `files` should be a YAML Collection of filenames (see [Example 2.3 here](http://yaml.org/spec/1.0/#id2489726))
 
 ### Making `screencast.mp4`
