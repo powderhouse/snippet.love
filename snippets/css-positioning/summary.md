@@ -1,1 +1,0 @@
-In this snippet, we walk through some of the basics of positioning elements in CSS.  Specifically, we touch on `absolute`, `relative`, and `fixed` positioning, (with `float` and `margin` positioning making brief appearances).

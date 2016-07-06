@@ -23,14 +23,19 @@ h3 {
     color: rgba(65, 62, 74, 0.375);
 }
 
+h3.section {
+    margin-top: 1em;
+}
+
 .snippet-summary .header {
     margin-bottom: 3rem;
 }
+
 #demo a {
     font-size: 0.875em;
-    color: lightblue;
     text-decoration: none;
 }
+
 header {
     font-family: 'Permanent Marker', cursive;
     font-size: 7rem;
@@ -39,10 +44,80 @@ header {
     margin-bottom: 0.25em;
     line-height: 0.75em;
     text-align: center;
+}
+
+a {
     color: rgb(179, 129, 132);
 }
 
-iframe.demo {
+a:visited {
+    color: rgb(115, 98, 110);
+}
+
+header a {
+    color: rgb(179, 129, 132);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1.title {
+    display: inline-block;
+    width: 100%;
+}
+
+h1 .title-text {
+    display: inline-block;
+    width: calc(50% - 8px);
+}
+
+h1.title .table-of-contents {
+    width: calc(50% - 8px);
+}
+
+h2.subtitle {
+    margin-top: -1em;
+}
+
+.table-of-contents {
+    opacity: 0.75;
+    text-align: right;
+    position: relative;
+    top: -0.125em;
+    display: inline-block;
+    padding: 0;
+    font-size: 0.625em;
+}
+
+.table-of-contents li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.table-of-contents li:after {
+    content: " —";
+}
+
+.table-of-contents li:last-child:after {
+    content: "";
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.snippet-summary > section {
+    margin-top: 3.5em;
+}
+
+section .description {
+    padding-bottom: 1em;
+}
+
+iframe.demo,
+section.code,
+video.screencast {
     border: none;
     box-shadow: inset 0px 0px 10px 0px #777777;
 }
