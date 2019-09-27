@@ -1,3 +1,3 @@
-1. **Actually center `#absoluteDiv`** — 
-2. **Add some wrapping text within `#floatBackground`** — 
-3. **Add a sticky header to the page** —
+1. **Actually center `#absoluteDiv`** — Find the div in the code with the ID "absoluteDiv." Use what you know about CSS positioning to center it on screen. Can you make sure it still works when you resize the screen?
+2. **Add some wrapping text within `#floatBackground`** — Find the div in the code with the ID "floatBackground." Add a long bout of text inside the div. Then, make sure the text "wraps," *e.g.* it stays within the div. Can you make the content scroll if there is more text than fits into the div when wrapped? 
+3. **Add a sticky header to the page** — A lot of sites have headers or navigation bars which, when you start scrolling down the page, affix themselves to the stop of the screen. Create such a header on this page!

@@ -130,8 +130,10 @@ video.screencast {
 
 .snippet-card {
     position: relative;
+    /*display: inline-block;*/
     height: 250px;
     width: 250px;
+    margin-right:20px;
 }
 
 .snippet-card img {

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+    body {
+        /* Set the body/background of this page to be as large as the screen it's being viewed on and fix its position. */
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+    
+    .circle {
+        /* For all elements drawn with the class "circle," set them to this size (height, width, circle-shape), positioning (absolute, meaning place it on a coordinate system on the screen), and transition status (make any effects applied take 25ms to happen). */
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: 25ms;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+    // First, we set the total number of circles we want to be drawn. This will be how many circles make up our "inch worm."
+    var numCircles = 100;
+
+    // Now, create a type of object called "Circle." This object is sort of like a cookie cutter, something we'll make many instances of, that we can copy and create many of.
+    var Circle = function(i) {
+        var self = this; // Once we've created a circle, this line allows us to refer to the circle's own self using "this", without confusing it with other circles.
+        
+        self.i = i; // Next, we give our Circle object a counter, which we will be able to use down the line to keep track of where we should position the element based on the entries in the `points` array, to be created later
+
+        // Next, we give our Circle object the code it needs to create and style actual divs, which can be drawn into the browser to make it take up space, giving it the class 'circle,' setting its color, etc.
+        self.div = document.createElement('div');
+        self.div.classList.add('circle');
+        var randomColor = 'hsl(' + [
+            200 + (360-200)/numCircles*i,
+            '100%',
+            '50%'
+        ].join(',') + ')';
+        self.div.style.backgroundColor = randomColor;
+
+        // Next, we attach an event listener to the entire webpage that is "listening" for any mouse movement
+        document.addEventListener('mousemove', function() { // When the document hears our mouse move
+            
+            var newPoint = points[self.i]; // Set our left and top to the point pair stored in "our" point (i.e. points[i]) 
+            var newX = newPoint[0] - self.div.offsetWidth / 2; 
+            var newY = newPoint[1] - self.div.offsetHeight / 2; // Offset the width and height so that our mouse is in the middle of each circle we draw
+
+            self.div.style.left = newX + 'px';
+            self.div.style.top = newY + 'px';
+            // Add "px" to the end of each calculation, so the browser knows their units are pixels
+        });
+
+        document.body.appendChild(self.div); // Finally, we aactually put the div we've so carefully designed in our webpage, called "document"
+    };
+
+    // To set ourselves up to keep track of the positions our circles should be drawn in and the status of all the circles we've already drawn, we create some empty arrays
+    var points = [];
+    var circles = [];
+
+    // Then, we create an initial array of positions that places all of our circles at the point (100,100), just to start
+    for (var i = 0; i < numCircles; i++) {
+        points.push([100, 100]);
+    }
+    // We fill our circles array with however many Circle objects numCircles is equal to
+    for (var i = 0; i < numCircles; i++) {
+        circles.push(new Circle(i))
+    }
+
+    // Finally, whenever the mouse moves in the document
+    document.body.addEventListener('mousemove', function(event) {
+        points.shift(); // We remove the first element of the points array
+        points.push([event.x, event.y]); // And push our new point (from where the mouse is) to keep updating the placement of our 100 circles to get our inchworm effect
+    });
+    </script>
+</body>
+
+</html>

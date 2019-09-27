@@ -1,0 +1,3 @@
+
++ MDN's pages on [`MouseEvent`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent), [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener), and [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) are good references to see a bit more about how this effect was implemented.
++ Shay Howe's [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/) is a great resource which we recommend for all your HTML and CSS questions; his [section on positioning content]( http://learn.shayhowe.com/html-css/positioning-content/) is the pertinent section for this snippet…its materials on `float` are especially good.
