@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<main style="padding: 1em;">
+<main id="snippet-grid" style="padding: 1em;">
 
 {% for snippet in site.pages | where: 'category', 'snippet' %}
   {% if snippet.title %}
-    <div class='snippet-card'>
+    <div id='snippet-{{ snippet.id }}' class='snippet-card'>
         <img src='{{ snippet.url }}background.png'>
         <h2><a href='{{ snippet.url }}'>{{ snippet.title }}</a></h2>
         <h3>{{ snippet.subtitle }}</h3>

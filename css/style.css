@@ -4,7 +4,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif;
     color: #111;
     line-height: 1.5em;
-    width: 960px;
+    width: 1080px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(247, 228, 190, 0.5);
@@ -174,4 +174,11 @@ section.code {
     margin-right: auto;
     width: 80em;
     background-color: grey;
+}
+
+#snippet-grid {
+    display: inline-grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(10, 250px);
 }
